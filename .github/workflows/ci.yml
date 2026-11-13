@@ -67,6 +67,8 @@ jobs:
         run: pnpm test
 
       - name: Build client & server and verify bundle budget
+        env:
+          NODE_ENV: production
         run: |
           pnpm build
           pnpm check:bundle
