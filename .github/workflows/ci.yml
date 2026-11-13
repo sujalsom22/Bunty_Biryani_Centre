@@ -61,7 +61,7 @@ jobs:
 
       - name: Security review - check for raw unsafe queries
         run: |
-          ! git grep -n "queryRawUnsafe\|executeRawUnsafe" -- ':!tests/unit/stock-writes-guard.test.ts' ':!*.md'
+          ! git grep -n "queryRawUnsafe\|executeRawUnsafe" -- ':!tests/unit/stock-writes-guard.test.ts' ':!*.md' ':!.github/**'
 
       - name: Run unit & integration tests
         run: pnpm test
